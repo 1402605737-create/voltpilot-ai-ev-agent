@@ -4,7 +4,7 @@
 
 **线上状态：** Vercel 前后端已部署 · Supabase Postgres 已连接 · DeepSeek V4 Flash 已配置 · 真实 Agent 调用已验证
 
-VoltPilot 是一个面向 AI 产品经理作品集的新能源汽车复杂 AI 产品 Demo，覆盖“补能规划 + 电池健康 + 充电站运营 + 车队调度 + 模型评估 + 数据权限”。
+VoltPilot 是一个新能源汽车复杂 AI 产品 Demo，覆盖“补能规划 + 电池健康 + 充电站运营 + 车队调度 + 模型评估 + 数据权限”。
 <img width="1571" height="2361" alt="image" src="https://github.com/user-attachments/assets/a8f68322-7e88-4103-9635-b8d095dbb5ed" />
 
 ## 产品亮点
@@ -39,9 +39,8 @@ VITE_API_BASE=http://127.0.0.1:8795
 
 前端不会直接读取 API Key。浏览器只调用本地 `/api/agent`，后端负责调用 DeepSeek，避免密钥泄露。
 
-## 作品集讲解建议
+## 总结
 
-面试时可以按这条主线讲：
 
 1. 用户痛点：新能源车主长途出行的续航焦虑、排队不确定、补能成本和电池健康不透明。
 2. 产品方案：VoltPilot 用 Agent 编排多个确定性工具，输出可确认、可解释、可兜底的补能决策。
