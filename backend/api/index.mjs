@@ -337,7 +337,7 @@ async function healthHandler(req, res) {
     const result = await queryDatabase(`
       select
         current_database() as database,
-        (select count(*)::int from agent_runs) as case_count
+        (select count(*)::int from voltpilot.agent_runs) as case_count
     `);
     database = result.rows[0].database;
     caseCount = result.rows[0].case_count;
@@ -379,7 +379,7 @@ async function agentHandler(req, res) {
 
   try {
     await queryDatabase(
-      `insert into agent_runs (id, prompt, mode, summary, fallback, payload)
+      `insert into voltpilot.agent_runs (id, prompt, mode, summary, fallback, payload)
        values ($1, $2, $3, $4, $5, $6::jsonb)
        on conflict (id) do update set
          mode = excluded.mode,

@@ -1,4 +1,6 @@
-create table if not exists charging_stations (
+create schema if not exists voltpilot;
+
+create table if not exists voltpilot.charging_stations (
   id text primary key,
   name text not null,
   city text not null,
@@ -10,7 +12,7 @@ create table if not exists charging_stations (
   updated_at timestamptz not null default now()
 );
 
-create table if not exists agent_runs (
+create table if not exists voltpilot.agent_runs (
   id text primary key,
   prompt text not null,
   mode text not null,
@@ -20,9 +22,9 @@ create table if not exists agent_runs (
   created_at timestamptz not null default now()
 );
 
-create index if not exists agent_runs_created_at_idx on agent_runs (created_at desc);
+create index if not exists agent_runs_created_at_idx on voltpilot.agent_runs (created_at desc);
 
-insert into charging_stations
+insert into voltpilot.charging_stations
   (id, name, city, power_kw, price_per_kwh, available_chargers, queue_minutes, fault_risk)
 values
   ('KS-SOUTH', '昆山南综合超充站', '昆山', 480, 1.18, 7, 6, 0.04),
@@ -39,7 +41,7 @@ on conflict (id) do update set
   fault_risk = excluded.fault_risk,
   updated_at = now();
 
-insert into agent_runs (id, prompt, mode, summary, fallback, payload)
+insert into voltpilot.agent_runs (id, prompt, mode, summary, fallback, payload)
 values (
   'VP-DEMO-SEED',
   '今晚从苏州到上海虹桥，要求少排队、成本低',
