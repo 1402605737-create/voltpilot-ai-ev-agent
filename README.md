@@ -5,6 +5,7 @@
 **线上状态：** Vercel 前后端已部署 · Supabase Postgres 已连接 · DeepSeek V4 Flash 已配置 · 真实 Agent 调用已验证
 
 VoltPilot 是一个面向 AI 产品经理作品集的新能源汽车复杂 AI 产品 Demo，覆盖“补能规划 + 电池健康 + 充电站运营 + 车队调度 + 模型评估 + 数据权限”。
+<img width="1571" height="2361" alt="image" src="https://github.com/user-attachments/assets/a8f68322-7e88-4103-9635-b8d095dbb5ed" />
 
 ## 产品亮点
 
