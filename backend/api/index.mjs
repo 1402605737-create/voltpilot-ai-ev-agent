@@ -300,7 +300,7 @@ async function callDeepSeek(run) {
           {
             role: 'system',
             content:
-              '你是 VoltPilot 新能源汽车补能与电池健康 AI 产品中的决策解释 Agent。只基于给定 JSON 输出面向车主的简洁中文解释，包含推荐理由、风险兜底、确认动作。'
+              'You are the decision-explanation agent for VoltPilot. Use only the supplied JSON. Respond in concise Chinese with the recommendation rationale, risk fallback, and required confirmation action.'
           },
           {
             role: 'user',

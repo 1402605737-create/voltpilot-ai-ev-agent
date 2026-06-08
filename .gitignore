@@ -19,3 +19,5 @@ Thumbs.db
 *.pem
 *.key
 supabase/.temp/
+
+.vercel

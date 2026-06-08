@@ -22,7 +22,8 @@ create table if not exists voltpilot.agent_runs (
   created_at timestamptz not null default now()
 );
 
-create index if not exists agent_runs_created_at_idx on voltpilot.agent_runs (created_at desc);
+create index if not exists agent_runs_created_at_idx
+  on voltpilot.agent_runs (created_at desc);
 
 insert into voltpilot.charging_stations
   (id, name, city, power_kw, price_per_kwh, available_chargers, queue_minutes, fault_risk)
